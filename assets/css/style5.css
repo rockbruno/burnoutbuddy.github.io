@@ -114,10 +114,6 @@ h1, h2 {
 	justify-content: center;
 }
 
-.footer-pre {
-	margin-top: 64px;
-}
-
 .action-smaller {
 	font-size: 40px;
 }
@@ -688,22 +684,14 @@ ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; fon
 
 /***** Footer *****/
 
-footer {
-	padding: 25px 0 20px 0;
-	background: #333;
-	text-align: right;
+.footer {
+	margin-top: 32px;
+	padding-bottom: 32px;
 }
 
-.footer-copyright {
-	margin: 6px 0 0 0;
-	font-size: 18px;
-    line-height: 32px;
-    color: #fff;
-    text-align: left;
+.align-left {
+	text-align: left;
 }
-
-.footer-copyright a, .footer-copyright a:focus { color: #fff; }
-.footer-copyright a:hover { color: #fff; border-bottom: 1px dotted #fff; }
 
 
 /***** Full width content *****/
