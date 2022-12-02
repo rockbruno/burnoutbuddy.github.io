@@ -1,1 +1,1 @@
-Sitemap: https://burnoutbuddy.rockbruno.com/sitemap.xml
+Sitemap: https://burnoutbuddy.io/sitemap.xml
