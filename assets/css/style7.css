@@ -294,6 +294,7 @@ h1, h2 {
 	margin-bottom: 0;
 	height: 64px;
 	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 	border: 0;
 	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
 }
