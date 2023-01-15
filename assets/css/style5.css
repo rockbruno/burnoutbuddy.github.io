@@ -15,17 +15,83 @@ a, a:hover, a:focus {
 }
 
 h1, h2 {
-	margin-top: 10px;
-	font-size: 57px;
+/*	margin-top: 10px;*/
+	font-size: 54px;
     font-weight: 800;
-    line-height: 1;
+    line-height: 60px;
 }
 
 .highlight {
+/*  background-image: linear-gradient(to right, #3B82F6, #4f46e5);
+  border-radius: 6px;
+  padding: 3px 6px;
+  color:linear-gradient(to right, #3B82F6, #4f46e5);;*/
+  background-image: linear-gradient(to right, #3B82F6, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight-bg {
   background-image: linear-gradient(to right, #3B82F6, #4f46e5);
   border-radius: 6px;
   padding: 3px 6px;
-  color:white;
+  color: white;
+}
+
+@media (max-width: 800px) {
+	.top-content h1 {
+		text-align: center;
+		font-size: 32px;
+		line-height: 42px;
+	}
+	.main-margin {
+		margin-top: 112px;
+	}
+	.base-text {
+		text-align: center;
+	}
+	.main-dl {
+		display: flex;
+		justify-content: center;
+	}
+	.main-left {
+		margin-bottom: 48px;
+	}
+	.section-why h1 {
+		font-size: 48px;
+	}
+	.section-why {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.section-pic {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+	.section-description p {
+	    text-align: left;
+	}
+	.section-description h2 {
+	    text-align: left;
+	}
+}
+@media (min-width: 800px) {
+	.main-margin {
+		margin-top: 148px;
+	}
+	.section-why h1 {
+		font-size: 48px;
+	}
+	.section-why {
+		margin-top: 200px;
+		margin-bottom: 200px;
+	}
+	.section-description p {
+	    text-align: left;
+	}
+	.section-description h2 {
+	    text-align: left;
+	}
 }
 
 .flex-center {
@@ -64,7 +130,7 @@ h1, h2 {
     align-items: center;*/
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
 	.section-text-part {
 		margin-left: 128px;
 		margin-right: 64px;
@@ -77,10 +143,30 @@ h1, h2 {
 		margin-right: 32px;
 		margin-bottom: 32px;
 	}
-}
+}*/
 
 .current-features {
-	background-color: #fafafa;
+/*	background-color: #fafafa;*/
+}
+
+.feature-grid {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(1,minmax(0,1fr));
+}
+@media (min-width: 700px) {
+	.feature-grid {
+		grid-template-columns: repeat(2,minmax(0,1fr));
+	}
+}
+@media (min-width: 1024px) {
+	.feature-grid {
+		grid-template-columns: repeat(3,minmax(0,1fr));
+	}
+}
+
+.features-box {
+	display: flow-root;
 }
 
 .curr-title {
@@ -90,22 +176,21 @@ h1, h2 {
 	margin-bottom: 16px;
 }
 
-.navcontainer a {
+/*.navcontainer a {
 	color: black;
-	width: 50px;
-	height: 50px;
-}
+	width: 40px;
+	height: 40px;
+}*/
 
-.navcontainer i {
+/*.navcontainer i {
 	width: 100%;
 	height: 100%;
 	font-size: 28px;
-	line-height: 58px;
-}
+	line-height: 64px;
+}*/
 
 .features-box {
 	margin-top: 16px;
-	background: white;
 	padding: 32px;
 	padding-bottom: 16px;
 	box-shadow: 0px 0px 16px 1px #eeeeee;
@@ -116,6 +201,14 @@ h1, h2 {
 
 .action-smaller {
 	font-size: 40px;
+	letter-spacing: .02em;
+	font-weight: 500;
+}
+
+.action-text {
+	font-size: 18px;
+	letter-spacing: .02em;
+/*	font-weight: 500;*/
 }
 
 .features-box h3 {
@@ -134,7 +227,7 @@ h1, h2 {
 .section-logo {
 	width: 48px;
 	height: 48px;
-	margin-bottom: 24px;
+	margin-bottom: 6px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -145,8 +238,8 @@ h1, h2 {
 }
 
 .section-pic {
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 500px;
 }
 
 .pic-right {
@@ -169,7 +262,6 @@ h1, h2 {
 .section-description h2 {
 	font-size: 30px;
 	color: black;
-	text-align: left;
 }
 .section-container-full-bg .section-description h2 { color: #fff; }
 
@@ -179,7 +271,6 @@ h1, h2 {
     line-height: 30px;
     font-weight: 350;
     color: rgb(85 91 102/1);
-    text-align: left;
 }
 .section-container-full-bg .section-description p { opacity: 0.8; }
 
@@ -187,11 +278,13 @@ h1, h2 {
 /***** Top menu *****/
 
 .navbar {
-	margin-top: 16px;
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+	width: 100%;
 	margin-bottom: 0;
-	margin-left: 16px;
-	margin-right: 16px;
-	background: #ffffff;
+	height: 64px;
+	backdrop-filter: blur(4px);
 	border: 0;
 	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
 }
@@ -221,16 +314,83 @@ ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; fon
 
 .navbar-brand img {
 	width: auto;
-	height: 50px;
+	height: 40px;
+}
+
+.navbar-dl {
+	height: 40px;
+}
+
+.navbar-dl-1 {
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+
+.navbar-dl a {
+	width: auto;
+	height: 40px;
+}
+
+.main-pic-container {
+	position: relative;
+	height: 500px;
+}
+
+.main-pic {
+	position: absolute;
+	z-index: 2;
+	height: 500px;
+}
+
+.main-pic-drawing {
+/*	margin-left: -32px;*/
+	position: absolute;
+/*	z-index: 2;*/
+}
+
+.main-pic img {
+	margin-left: 32px;
+	height: 100%;
+/*	max-width: 400px;*/
+}
+
+.main-dl {
+	margin-top: 24px;
+}
+
+.main-dl a {
+	width: auto;
+	height: 53px;
+}
+
+.main-dl img {
+	width: auto;
+	height: 53px;
+}
+
+.navbar-text {
+/*	height: 40px;*/
+	margin-left: 8px;
+	font-weight: bold;
+	font-size: 20px;
+/*	margin-bottom: 8px;*/
+}
+
+.navbar-dl img {
+	height: 40px;
 }
 
 .navbar-header {
 	width: 100%;
+	height: 40px;
 }
 
 .navcontainer {
   display: flex;
   justify-content: space-between;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .navitem {
@@ -238,6 +398,54 @@ ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; fon
 }
 
 /***** Top content *****/
+
+.main-margin {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.main-padding {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.main-list {
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.list-element {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.list-check {
+	width: 18px;
+	height: 18px;
+	color: blue;
+}
+
+.main-list-call {
+	margin-
+}
+
+.base-text p {
+	opacity: 0.8;
+   	color: rgb(46 46 51/1);
+   	letter-spacing: -.01em;
+   	font-weight: 400;
+   	font-size: 16px;
+   	margin: 0;
+}
+
+.list-element p {
+	margin-left: 4px;
+}
+
+.list-special p {
+	font-weight: 800;
+}
 
 .top-content {
     margin: 0 auto;
@@ -254,11 +462,21 @@ ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; fon
 }
 
 .features-container {
-	background: #ffffff;
+/*	background: #ffffff;*/
 }
 
-.features {
-/*	margin-top: 60px;*/
+.action-container {
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+
+.section-why h1 {
+	font-weight: 500;
+	margin-bottom: 48px;
+}
+
+.section-why p {
+	font-size: 24px;
 }
 
 .inner-bg {
