@@ -74,6 +74,9 @@ h1, h2 {
 	.section-description h2 {
 	    text-align: left;
 	}
+	.list-element p {
+		text-align: left;
+	}
 }
 @media (min-width: 800px) {
 	.main-margin {
@@ -244,7 +247,8 @@ h1, h2 {
 
 .section-pic {
 	width: auto;
-	height: 500px;
+	max-height: 500px;
+	max-width: 99%;
 }
 
 .pic-right {
