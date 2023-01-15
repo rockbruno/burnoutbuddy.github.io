@@ -929,6 +929,20 @@ ul.navbar-nav li .dropdown-menu a { padding-top: 13px; padding-bottom: 13px; fon
 	padding-bottom: 8px;
 }
 
+.footer-link a {
+/*	opacity: 0.9;
+   	color: rgb(46 46 51/1);*/
+   	text-decoration: none;
+}
+
+.decoration :hover {
+    text-decoration:underline;
+}
+
+.made-by {
+	margin-top: 24px;
+}
+
 
 /***** Full width content *****/
 
